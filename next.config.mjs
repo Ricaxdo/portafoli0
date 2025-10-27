@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
@@ -8,4 +8,5 @@ const nextConfig = {
   basePath: isProd ? "/portafoli0" : "",
   assetPrefix: isProd ? "/portafoli0/" : "",
 };
+
 export default nextConfig;

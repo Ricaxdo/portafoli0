@@ -6,10 +6,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export -o docs",
+    "postbuild": "node -e \"require('fs').writeFileSync('docs/.nojekyll','')\"",
     "start": "next start",
-    "lint": "eslint .",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
