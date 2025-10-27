@@ -4,9 +4,45 @@ import { Code2, ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "SpaceX Launch Dashboard",
+    description:
+      "Dashboard interactivo para visualizar, filtrar y gestionar lanzamientos espaciales de SpaceX usando su API pública oficial. Incluye mapa interactivo con Google Maps y sistema de favoritos con localStorage.",
+    context:
+      "Proyecto personal enfocado en la exploración de datos espaciales en tiempo real usando la API pública de SpaceX. Diseñado para ofrecer una experiencia visual y analítica atractiva.",
+    analysis:
+      "Se integró Next.js con TypeScript y Tailwind para lograr una UI fluida y optimizada. El mapa con Google Maps API permitió representar ubicaciones precisas y mejorar la interacción del usuario.",
+    conclusions:
+      "El resultado fue un dashboard rápido, informativo y escalable, con datos actualizados dinámicamente y soporte para despliegue con Docker.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Google Maps API",
+      "Docker",
+      "Tailwind CSS",
+    ],
+    github: "https://github.com/Ricaxdo/spacex_launch_dashboard",
+    demo: null,
+    features: [
+      "Consumo de API REST de SpaceX con filtros avanzados",
+      "Mapa interactivo con Google Maps para visualizar sitios de lanzamiento",
+      "Sistema de favoritos persistente con localStorage",
+      "Filtros por año, resultado, cohete y búsqueda por misión",
+      "UI responsiva y moderna con animaciones suaves",
+      "Dockerizado para fácil despliegue",
+    ],
+    image: "/images/spacex-dashboard.png", // opcional: agrega una imagen o GIF
+  },
+  {
     title: "Around React",
     description:
       "Aplicación web interactiva desarrollada con React y Vite para compartir y gestionar fotografías. Incluye funcionalidades de perfil de usuario, galería de imágenes y sistema de likes.",
+    context:
+      "Versión moderna del clásico proyecto ‘Around The U.S.’, reconstruida en React con un enfoque modular, limpio y responsive.",
+    analysis:
+      "Durante el desarrollo se implementaron hooks para la gestión del estado, metodología BEM para estilos y una estructura escalable para componentes reutilizables.",
+    conclusions:
+      "Se logró una app visualmente atractiva y fácil de mantener, que demuestra dominio en arquitectura React y principios de diseño UI/UX.",
     technologies: ["React", "Vite", "JavaScript", "CSS", "HTML", "BEM"],
     github: "https://github.com/Ricaxdo/web_project_around_react",
     demo: null,
@@ -16,12 +52,13 @@ const projects = [
       "Gestión de estado con hooks",
       "Metodología BEM para estilos",
     ],
+    image: "/images/around-react.png", // opcional
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20 px-4">
+    <section id="projects" className="py-10 px-4">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-8">Proyectos</h2>
 
@@ -46,7 +83,20 @@ export function Projects() {
                   </div>
                 </div>
 
-                <ul className="space-y-2 ml-14">
+                {/* 📄 Bloque de documentación breve */}
+                <div className="ml-14 space-y-1 text-sm text-muted-foreground border-l border-border pl-4">
+                  <p>
+                    <strong>Contexto:</strong> {project.context}
+                  </p>
+                  <p>
+                    <strong>Análisis:</strong> {project.analysis}
+                  </p>
+                  <p>
+                    <strong>Conclusiones:</strong> {project.conclusions}
+                  </p>
+                </div>
+
+                <ul className="space-y-2 ml-14 pt-2">
                   {project.features.map((feature, i) => (
                     <li key={i} className="flex gap-3">
                       <span className="text-primary mt-1.5 text-xs">▹</span>
