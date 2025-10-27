@@ -8,9 +8,7 @@
     "build": "next build && next export",
     "postbuild": "node -e \"const fs=require('fs');fs.rmSync('docs',{recursive:true,force:true});fs.mkdirSync('docs',{recursive:true});fs.cpSync('out','docs',{recursive:true});fs.writeFileSync('docs/.nojekyll','')\"",
     "start": "next start",
-    "deploy": "npm run build && git add . && git commit -m \"update portfolio\" && git push origin main",
-    "lint": "eslint .",
-    "update": "npm run build && git add . && git commit -m \"update\" && git push"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
