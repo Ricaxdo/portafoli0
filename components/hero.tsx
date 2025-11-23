@@ -15,7 +15,7 @@ export function Hero() {
       <div className="max-w-4xl w-full relative z-10">
         <div className="space-y-6">
           <p className="text-primary font-mono text-sm md:text-base animate-in fade-in slide-in-from-bottom-4 duration-700">
-            Hola
+            Hola, soy
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
